@@ -90,6 +90,41 @@ h2 {
     color: #263F39;
 }
 
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.destinations section {
+    background-color: #fbf4e8;
+    padding: 20px;
+    border: 1.5px solid #78694c;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.destinations h3 {
+    color: #263F39;
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .destinations {
+        grid-template-columns: 1fr;
+    }
+}
+
+.destinations a {
+    color: #368573;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.destinations a:hover {
+    text-decoration: underline;
+}
+
 .featured-destinations {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
