@@ -6,16 +6,25 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #363636;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, #f8f5ef, #f3ede4);
+    color: #3b3939;
 }
 
+body a {
+    color: #34806e;
+    text-decoration: underline;
+}
+
+body a:hover {
+    color: #04af87;
+}
 
 header {
     background-color: #263F39;
-    color: #ffffff;
+    color: #f5f0e6;
     padding: 20px;
     text-align: center;
 }
@@ -48,17 +57,23 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.hero-image {
+.banner-image {
     width: 100%;
     height: 375px;
     overflow: hidden;
 }
 
-.hero-image img {
+.banner-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+@media (max-width: 600px) {
+    .banner-image {
+        height: 250px;
+    }
 }
 
 main {
@@ -75,9 +90,76 @@ h2 {
     color: #263F39;
 }
 
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.destinations section {
+    background-color: #fbf4e8;
+    padding: 20px;
+    border: 1.5px solid #78694c;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.destinations h3 {
+    color: #263F39;
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .destinations {
+        grid-template-columns: 1fr;
+    }
+}
+
+.destinations a {
+    color: #368573;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.destinations a:hover {
+    text-decoration: underline;
+}
+
+.featured-destinations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.featured-card {
+    background-color: #F5F0E6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.featured-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.featured-card h3 {
+    color: #263F39;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .featured-destinations {
+        grid-template-columns: 1fr;
+    }
+}
+
 footer {
     background-color: #263F39;
-    color: #ffffff;
+    color: #f5f0e6;
     text-align: center;
     padding: 15px;
 }
